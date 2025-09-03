@@ -1,0 +1,46 @@
+import java.util.Scanner;
+import static java.lang.Math.*;
+
+public class Main {
+
+    private static final double G = 9.8;
+
+    private static double selecionarVelocidade(Scanner scanner) {
+        System.out.println("Escolher o tanque:");
+        System.out.println("1 - M1 Abrams (~1700m/s)");
+        System.out.println("2 - Obuseiro M109 (~600m/s)");
+        System.out.println("3 - Schwerer Gustav (~820m/s)");
+        System.out.print("Digite o número da opção desejada: ");
+
+        int opcao = scanner.nextInt();
+        if (opcao == 1) return 1700.0;
+        if (opcao == 2) return 600.0;
+        if (opcao == 3) return 820.0;
+
+        System.out.println("Opção inválida, usando valor padrão (15 m/s).");
+        return 15.0;
+    }
+
+    private static double calcularAlcance(double v0, double angulo) {
+        double rad = toRadians(angulo);
+        return (v0 * v0 * sin(2 * rad)) / G;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double v0 = selecionarVelocidade(scanner);
+
+        System.out.print("Digite o ângulo de lançamento (em graus): ");
+        double angulo = scanner.nextDouble();
+
+        double alcance = calcularAlcance(v0, angulo);
+
+        System.out.printf(
+            "Para velocidade inicial = %.1f m/s e ângulo = %.1f graus, o alcance é de %.2f km%n",
+            v0, angulo, alcance / 1000.0
+        );
+
+        scanner.close();
+    }
+}
