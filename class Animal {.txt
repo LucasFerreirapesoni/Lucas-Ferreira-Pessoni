@@ -1,0 +1,56 @@
+class Animal {
+    public String nome;
+    public double peso;
+    public String raca;
+
+    public void emitirSom() {
+        System.out.println("O animal faz um som genérico.");
+    }
+}
+
+class Cachorro extends Animal {
+    @Override
+    public void emitirSom() {
+        System.out.println("O cachorro late: Au Au!");
+    }
+}
+
+class Gato extends Animal {
+    @Override
+    public void emitirSom() {
+        System.out.println("O gato mia: Miau!");
+    }
+}
+
+class Camelo extends Animal {
+    @Override
+    public void emitirSom() {
+        System.out.println("O camelo blatera: brããã!");
+    }
+}
+
+class Cavalo extends Animal {
+    @Override
+    public void emitirSom() {
+        System.out.println("O cavalo relincha: iiirrrrí!");
+    }
+}
+
+class Tubarao extends Animal {
+    @Override
+    public void emitirSom() {
+        System.out.println("O tubarão clica os dentes!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal[] animais = {
+            new Cachorro(), new Gato(), new Camelo(), new Cavalo(), new Tubarao()
+        };
+
+        for (Animal animal : animais) {
+            animal.emitirSom();
+        }
+    }
+}
