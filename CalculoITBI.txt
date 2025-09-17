@@ -1,4 +1,3 @@
-CalculoITBI
 import java.util.Scanner;
 
 public class CalculoITBI {
@@ -17,7 +16,7 @@ public class CalculoITBI {
             
             double maiorValor = Math.max(valorTransacao, valorVenal);
 
-           
+            
             double valorImposto = maiorValor * percentualImposto / 100;
 
            
