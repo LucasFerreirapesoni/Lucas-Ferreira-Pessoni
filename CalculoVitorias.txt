@@ -1,11 +1,10 @@
-CalculoVitorias
 import java.util.Scanner;
 
 public class CalculoVitorias {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        
+       
         System.out.print("Digite a quantidade de pontos do líder: ");
         int pontosLider = scanner.nextInt();
 
@@ -13,9 +12,9 @@ public class CalculoVitorias {
         int pontosLanterna = scanner.nextInt();
 
         
-        int vitoriasNecessarias = (pontosLider - pontosLanterna + 2) / 3; // arredondar para cima
+        int vitoriasNecessarias = (pontosLider - pontosLanterna + 2) / 3; 
 
-        
+       
         System.out.println("Número de vitórias necessárias: " + vitoriasNecessarias);
     }
 }
