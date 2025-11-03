@@ -1,0 +1,18 @@
+ConversaoTempo
+import java.util.Scanner;
+
+public class ConversaoTempo {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Digite o valor em minutos: ");
+        int minutosTotais = entrada.nextInt();
+
+        int horas = minutosTotais / 60;
+        int minutosRestantes = minutosTotais % 60;
+
+        System.out.println(minutosTotais + " minutos equivalem a " + horas + " hora(s) e " + minutosRestantes + " minuto(s).");
+
+        entrada.close();
+    }
+}
