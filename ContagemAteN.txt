@@ -1,0 +1,20 @@
+ContagemAteN 
+
+import java.util.Scanner;
+
+public class ContagemAteN {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Digite um número N: ");
+        int n = entrada.nextInt();
+
+        System.out.println("Números de 1 até " + n + ":");
+
+        for (int i = 1; i <= n; i++) {
+            System.out.println(i);
+        }
+
+        entrada.close();
+    }
+}
